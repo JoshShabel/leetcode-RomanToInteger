@@ -20,13 +20,15 @@ class Solution {
     }
 
     public int I(String s) {
-        if (s.length() == 1) return 1; else if (s.substring(1, 2).equals("I")) return 1 + I(s.substring(1, s.length() - 1)); else if (s.substring(1, 2).equals("V")) {
+        if (s.length() == 1) return 1; else if (s.substring(1, 2).equals("I")) return 1 + 
+I(s.substring(1, s.length() - 1)); else if (s.substring(1, 2).equals("V")) {
             if (s.length() == 2) return 4; else return 9;
         }
     }
 
     public int V(String s) {
-        if (s.length() == 1) return 5; else if (s.substring(1, 2).equals("V")) return 5 + V(s.substring(1, s.length() - 1)); else return 5 + I(s.substring(1, s.length() - 1));
+        if (s.length() == 1) return 5; else if (s.substring(1, 2).equals("V")) return 5 + 
+V(s.substring(1, s.length() - 1)); else return 5 + I(s.substring(1, s.length() - 1));
     }
 }
 
